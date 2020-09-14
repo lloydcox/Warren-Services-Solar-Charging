@@ -1,195 +1,134 @@
-// Charge Table
+var regss = [{
+  "name": "NP60UQQ",
+  "values": "Little White"
+},
+{
+  "name": "NP60UQS",
+  "values": "Little Grey"
+},
+{
+  "name": "NP60UQT",
+  "values": "The Tango"
+},
+{
+  "name": "NP60UQU",
+  "values": "The Gandalf"
+},
+{
+  "name": "NP60UQV",
+  "values": "Aqua"
+},
+{
+  "name": "NP60UQW",
+  "values": "Big Red"
+}
+]
 
-$(document).ready( function () {
-    $('#table_id').DataTable();
-} );
-
-$('#table_id').DataTable( {
-    paging: false,
-    searching: false,
-    select: true
-} );
-
-$("input[type='text']").change(function(){
-    $(this).closest('td').find("span").show().text($(this).val());
-    $(this).hide();
+$(document).ready(function() {
+$('#table_id').DataTable();
 });
 
-$("input[type='time']").change(function(){
+$('#table_id').DataTable({
+paging: false,
+searching: false,
+select: true
+});
+
+$("input[type='text']").change(function() {
+var regs = $(this).val().toUpperCase();  
+
+if ($(this).hasClass("reg")) {
+  var cars_name = $(regss)
+    .filter(function(i, n) {
+      return n.name === regs;
+      
+    });
+  if (cars_name.length > 0) {
+    $(this).closest("tr").find(".name").text(cars_name[0].values)
     $(this).closest('td').find("span").show().text($(this).val());
     $(this).hide();
+
+  } else {
+    $(this).closest("tr").find(".name").text("Not a valid Registration")
+
+  }
+}
+});
+
+$("input[type='time']").change(function() {
+  var time = $(this).val().split(":")[0];//get hrs
+  console.log( $(this).val().split(":")[0]);
+  //check hrs if grater then or lss then or not
+  if((time >= 7) && (time <= 16)){
+   $(this).closest('td').find("span").show().text($(this).val());
+    $(this).hide();  
+  }else{
+  //show error 
+   alert("Please enter time below 16:00 and greater the 07:00");
+  }
 });
 
 
 $(".reset").click(function() {
-    $(".answer").html("");  
-    $("input").show();         
+$(".answer").html("");
+$("input").show();
 });
 
-// Getting name based on registration 
-
-var car1 = "Little White";
-var car2 = "Little Grey";
-var car3 = "The Tango";
-var car4 = "The Gandalf";
-var car5 = "Aqua";
-var car6 = "Big Red";
-
-var car_1_reg = "NP60UQQ";
-var car_2_reg = "NP60UQS";
-var car_3_reg = "NP60UQT";
-var car_4_reg = "NP60UQU";
-var car_5_reg = "NP60UQV";
-var car_6_reg = "NP60UQW";
-
-var reg = [car_1_reg,car_2_reg,car_3_reg,car_4_reg,car_5_reg,car_6_reg];
-
-var car_name_1 = document.getElementById('car-1-name');
-var car_1_charge = document.getElementById('car-1-charge-needed');
 $(".confirm").click(function() {
-    var car_reg_1 = $("#car-1-reg").val();
-    var a =  parseInt(document.getElementById('car-1-cmra').textContent, 10);
-    var b =  parseInt(document.getElementById('car-1-mtnc').textContent, 10);
-    var miles = Math.ceil((b - a) / 44);  
-    console.log(miles)
-    if (car_reg_1 != car_1_reg) {
-        car_name_1.innerText = 'Not a valid Registration';
-        car_1_charge.textContent = "Please enter a valid registration";
-    } else if (car_reg_1 = car_1_reg && ( isNaN(a) )) {
-        car_name_1.textContent = car1;
-        car_1_charge.textContent = "Please enter the current miles left";
-    } else if (car_reg_1 = car_1_reg && ( isNaN(b) )) {
-        car_name_1.textContent = car1;
-        car_1_charge.textContent = "Please enter the miles needed";
-    } else {
-        car_name_1.textContent = car1;
-        car_1_charge.textContent = miles;
-	}
+
+    $("#table_id tbody tr").each(function() {
+      if ($(this).find(".reg").val() == "") {
+      $(this).find(".name").text("Please enter valid Registration");
+  }
+  var cmra = $(this).find(".cmr").val();
+  var mtnc = $(this).find(".mtnc").val();
+  if ((cmra != null && cmra != "") && (mtnc != null && mtnc != "")) {
+    var miles = Math.ceil((parseInt(mtnc - cmra)) / 44);
+    $(this).find(".charge").text(miles);
+  } else if (cmra == null || cmra == "") {
+    $(this).find(".charge").text("Please enter the current miles left");
+  } else if (mtnc == null || mtnc == "") {
+    $(this).find(".charge").text("Please enter the mtnc  left");
+  }
+}) 
 });
 
-var car_name_2 = document.getElementById('car-2-name');
-var car_2_charge = document.getElementById('car-2-charge-needed');
-$(".confirm").click(function() {
-    var car_reg_2 = $("#car-2-reg").val();
-    var a =  parseInt(document.getElementById('car-2-cmra').textContent, 20);
-    var b =  parseInt(document.getElementById('car-2-mtnc').textContent, 20);
-    var miles = Math.ceil((b - a) / 44);  
-    console.log(miles)
-    if (car_reg_2 != car_2_reg) {
-        car_name_2.innerText = 'Not a valid Registration';
-        car_2_charge.textContent = "Please enter a valid registration";
-    } else if (car_reg_2 = car_2_reg && ( isNaN(a) )) {
-        car_name_2.textContent = car2;
-        car_2_charge.textContent = "Please enter the current miles left";
-    } else if (car_reg_2 = car_2_reg && ( isNaN(b) )) {
-        car_name_2.textContent = car2;
-        car_2_charge.textContent = "Please enter the miles needed";
-    } else {
-        car_name_2.textContent = car2;
-        car_2_charge.textContent = miles;
-	}
+$(".generate").click(function() {
+var count = 0;//for second table
+//remove any bg color in td
+$("#table_id_2 tbody td").css({
+  "background-color": ""
 });
+//loop through first table to get datas
+$("#table_id tbody tr").each(function() {
+//get required datas
+  var car1_name = $(this).find(".name").text();
+  var mtnc = $(this).find(".mtnc").val();
+  var charges = $(this).find(".charge").text();
+  var times = $(this).find('.time').val();
+//get hours i.e : 11:30 so take "11"
+  var hrs = times.split(":")[0]-1;
+ //get leaves
+  var leaves = parseInt(hrs - charges);
+  //loop through second table starting from tr eq 0
+   $("#table_id_2 tbody tr:eq(" + count + ")").each(function() {
+    $(this).find("td:eq(0)").text(car1_name);//set car_name
+//if hrs = 11 and leaves = 2 so loop from 11 -10-9-8..
+    for (var i = hrs; i > leaves; i--) {
+    //add bg to that td
+      $(this).find("td[value=" + i + "]").css({
+        "background-color": "yellow"
+      });;
+    }
+    // add exit miles 
+    $(this).find(".exit").text(mtnc)
+  });
+  count++;//increment to go to next tr 
 
-var car_name_3 = document.getElementById('car-3-name');
-var car_3_charge = document.getElementById('car-3-charge-needed');
-$(".confirm").click(function() {
-    var car_reg_3 = $("#car-3-reg").val();
-    var a =  parseInt(document.getElementById('car-3-cmra').textContent, 30);
-    var b =  parseInt(document.getElementById('car-3-mtnc').textContent, 30);
-    var miles = Math.ceil((b - a) / 44);  
-    console.log(miles)
-    if (car_reg_3 != car_3_reg) {
-        car_name_3.innerText = 'Not a valid Registration';
-        car_3_charge.textContent = "Please enter a valid registration";
-    } else if (car_reg_3 = car_3_reg && ( isNaN(a) )) {
-        car_name_3.textContent = car3;
-        car_3_charge.textContent = "Please enter the current miles left";
-    } else if (car_reg_3 = car_3_reg && ( isNaN(b) )) {
-        car_name_3.textContent = car3;
-        car_3_charge.textContent = "Please enter the miles needed";
-    } else {
-        car_name_3.textContent = car3;
-        car_3_charge.textContent = miles;
-	}
+})
+
 });
-
-var car_name_4 = document.getElementById('car-4-name');
-var car_4_charge = document.getElementById('car-4-charge-needed');
-$(".confirm").click(function() {
-    var car_reg_4 = $("#car-4-reg").val();
-    var a =  parseInt(document.getElementById('car-4-cmra').textContent, 40);
-    var b =  parseInt(document.getElementById('car-4-mtnc').textContent, 40);
-    var miles = Math.ceil((b - a) / 44);  
-    console.log(miles)
-    if (car_reg_4 != car_4_reg) {
-        car_name_4.innerText = 'Not a valid Registration';
-        car_4_charge.textContent = "Please enter a valid registration";
-    } else if (car_reg_4 = car_4_reg && ( isNaN(a) )) {
-        car_name_4.textContent = car4;
-        car_4_charge.textContent = "Please enter the current miles left";
-    } else if (car_reg_4 = car_4_reg && ( isNaN(b) )) {
-        car_name_4.textContent = car4;
-        car_4_charge.textContent = "Please enter the miles needed";
-    } else {
-        car_name_4.textContent = car4;
-        car_4_charge.textContent = miles;
-	}
-});
-
-var car_name_5 = document.getElementById('car-5-name');
-var car_5_charge = document.getElementById('car-5-charge-needed');
-$(".confirm").click(function() {
-    var car_reg_5 = $("#car-5-reg").val();
-    var a =  parseInt(document.getElementById('car-5-cmra').textContent, 50);
-    var b =  parseInt(document.getElementById('car-5-mtnc').textContent, 50);
-    var miles = Math.ceil((b - a) / 44);  
-    console.log(miles)
-    if (car_reg_5 != car_5_reg) {
-        car_name_5.innerText = 'Not a valid Registration';
-        car_5_charge.textContent = "Please enter a valid registration";
-    } else if (car_reg_5 = car_5_reg && ( isNaN(a) )) {
-        car_name_5.textContent = car5;
-        car_5_charge.textContent = "Please enter the current miles left";
-    } else if (car_reg_5 = car_5_reg && ( isNaN(b) )) {
-        car_name_5.textContent = car5;
-        car_5_charge.textContent = "Please enter the miles needed";
-    } else {
-        car_name_5.textContent = car5;
-        car_5_charge.textContent = miles;
-	}
-});
-
-var car_name_6 = document.getElementById('car-6-name');
-var car_6_charge = document.getElementById('car-6-charge-needed');
-$(".confirm").click(function() {
-    var car_reg_6 = $("#car-6-reg").val();
-    var a =  parseInt(document.getElementById('car-6-cmra').textContent, 60);
-    var b =  parseInt(document.getElementById('car-6-mtnc').textContent, 60);
-    var miles = Math.ceil((b - a) / 44);  
-    console.log(miles)
-    if (car_reg_6 != car_6_reg) {
-        car_name_6.innerText = 'Not a valid Registration';
-        car_6_charge.textContent = "Please enter a valid registration";
-    } else if (car_reg_6 = car_6_reg && ( isNaN(a) )) {
-        car_name_6.textContent = car6;
-        car_6_charge.textContent = "Please enter the current miles left";
-    } else if (car_reg_6 = car_6_reg && ( isNaN(b) )) {
-        car_name_6.textContent = car6;
-        car_6_charge.textContent = "Please enter the miles needed";
-    } else {
-        car_name_6.textContent = car6;
-        car_6_charge.textContent = miles;
-	}
-});
-
-
-// Get leave time 
-
-function leaveTime() {
-    var timeLeaving = document.getElementsByClassName("ltime").value;
-    alert(timeLeaving);
-}
-
-$(".confirm").click(function(){
-    leaveTime;
+  $(".reset").click(function() {
+  $(".answer").html("");
+  $("input").show();
 });
