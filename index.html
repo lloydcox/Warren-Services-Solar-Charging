@@ -18,36 +18,15 @@
         <div class="page-container">
             <div class="container">
                     <header class="header">
-                        <ul>
-                            <li class="menu"><a href="#home">Home</a></li>
-                            <li class="menu"><a href="#about">About</a></li>
-                            <li class="menu"><a href="#cars">Cars</a></li>
-                            <li class="menu"><a href="table">Table</a></li>
-                            <li class="menu"><a href="footer">Footer</a></li>
-                        </ul>
+
                     </header>
 
-                    <div class="content-container">
+                <div class="content-container">
 
                     <div id="home" class="home">
                         <h1>Warren Services</h1>
-                            <p>Warren Services was founded in 1990. We are proud of our record of providing high quality manufacture of components and mechanical / electrical 
-                                sub assemblies to agreed schedules offering turnkey solutions in engineering and design.</p>
-
-                            <p>We moved into our existing premises in 2005. The factory was completely renovated and redeveloped, providing 30,000 sq ft of shopfloor area and
-                                new offices which gives us a modern and well equipped factory with new machinery and cutting edge IT systems.</p>
-                                
-                            <p>The space is split into CNC machining, welding, fabrication and finishing and water jet, laser and folding.</p>
-                                
-                            <p>In 2014 we completed and opened our second site, just around the corner at Brickfields, this gave us a further 50,000 sq ft. 
-                                This has given us the space to move our assembly processes over and allows for further development.</p>
                     </div>
 
-                    <div id="about" class="about">
-                        <h2>Solar CHargers</h2>
-                            <p>This website is for Warren Services employees to better understand and use the eletric vehicles we currently have and use.</p>
-                            <p>On this oage you will learn what cars we have, how long they take to charge, how many miles they have, and the charging timetable for the cars.</p>
-                    </div>
 
                     <div id="cars" class="cars">
                         <div class="cars-title">
@@ -169,228 +148,120 @@
                             <h2>Live Charge Time Table</h2>
                                 <p>Add the Registration of the car when you have hooked it up to charge so the table can take 
                                     in the current charge, charge accordingly and tell you how long is left for 100% charge.</p>
+
+                                <p>If at anytime you want to EDIT any details, hit the RESET</p>
+                                <button class="reset" type="reset">Reset</button>
                         </div>
 
-                        <div>
-                            <button class="confirm">Confirm</button>
-                            <button class="reset" type="reset">Reset</button>
-                            <table id="table_id" class="table">
-                                <thead>
-                                  <tr>
-                                    <th id="th-reg">Registration</th>
-                                    <th id="th-name">Name</th>
-                                    <th id="th-cmr">Current Miles Range</th>
-                                    <th id="th-cni">Miles needed for next trip</th>
-                                    <th id="th-tl">Hours to charge for next trip</th>
-                                    <th id="tpoc">Time Leaving</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <td><span class="answer"></span><input class="reg question" id="car-1-reg" type="text" value="" placeholder="Enter Registration"></input>
-                                    </td>
-                                    <td id="car-1-name" class="name value-reset"></td>
-                                    <td><span id="car-1-cmra" class="answer" type="number"></span><input id="car-1-cmr" class="cmr question" type="text" value="" placeholder="Enter Miles Left"></input>
-                                    </td>
-                                    <td><span id="car-1-mtnc" class="answer" type="number"></span><input id="car-1-mtnc" class="mtnc question" type="text" value="" placeholder="Enter Miles needed"></input>
-                                    </td>
-                                    <td id="car-1-charge-needed" class="charge"></td>
-                                    <td id="car-1-tl" class="tl"><span class="answer time-input" type="text"></span><input class="time" type="time" min="07:00:00" max="16:00:00" required></input>
-                                    </td>
+                            <div>
+
+                                <table id="table_id" class="table">
+                                    <thead>
+                                    <tr>
+                                        <th id="th-reg">Registration</th>
+                                        <th id="th-name">Name</th>
+                                        <th id="th-cmr">Current Miles Range</th>
+                                        <th id="th-cni">Miles needed for next trip</th>
+                                        <th id="th-tl">Hours to charge for next trip</th>
+                                        <th id="tpoc">Time Leaving</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><span class="answer"></span><input class="reg question" id="car-1-reg" type="text" value="" placeholder="Enter Registration"></input>
+                                        </td>
+                                        <td id="car-1-name" class="name value-reset"></td>
+                                        <td><span id="car-1-cmra" class="answer" type="number"></span><input id="car-1-cmr" class="cmr question" type="text" value="" placeholder="Enter Miles Left"></input>
+                                        </td>
+                                        <td><span id="car-1-mtnc" class="answer" type="number"></span><input id="car-1-mtnc" class="mtnc question" type="text" value="" placeholder="Enter Miles needed"></input>
+                                        </td>
+                                        <td id="car-1-charge-needed" class="charge"></td>
+                                        <td id="car-1-tl" class="tl"><span class="answer time-input" type="text"></span><input class="time" type="time" min="07:00:00" max="16:00:00" required></input>
+                                        </td>
+                            
+                                    </tr>
+                                    <tr>
+                                        <td><span class="answer"></span><input id="car-2-reg" class="reg" type="text" value="" placeholder="Enter Registration"></input>
+                                        </td>
+                                        <td id="car-2-name" class="name"></td>
+                                        <td><span id="car-2-cmra" class="answer" type="number"></span><input id="car-2-cmr" class="cmr" type="text" value="" placeholder="Enter Miles Left"></input>
+                                        </td>
+                                        <td><span id="car-2-mtnc" class="answer" type="number"></span><input id="car-2-mtnc" class="mtnc" type="text" value="" placeholder="Enter Miles needed"></input>
+                                        </td>
+                                        <td id="car-2-charge-needed" class="charge"></td>
+                                        <td id="car-2-tl" class="tl"><span class="answer" type="time"></span><input class="time" type="time" min="07:00:00" max="16:00:00" required></input>
+                                        </td>
+                            
+                                    </tr>
+                                    <tr>
+                                        <td><span class="answer"></span><input id="car-3-reg" class="reg" type="text" value="" placeholder="Enter Registration"></input>
+                                        </td>
+                                        <td id="car-3-name" class="name"></td>
+                                        <td><span id="car-3-cmra" class="answer"></span><input id="car-3-cmr" class="cmr" type="text" value="" placeholder="Enter Miles Left"></input>
+                                        </td>
+                                        <td><span id="car-3-mtnc" class="answer" type="number"></span><input id="car-3-mtnc" class="mtnc" type="text" value="" placeholder="Enter Miles needed"></input>
+                                        </td>
+                                        <td id="car-3-charge-needed" class="charge"></td>
+                                        <td id="car-3-tl" class="tl"><span class="answer" type="time"></span><input class="time" type="time" min="07:00:00" max="16:00:00" required></input>
+                                        </td>
+                            
+                                    </tr>
+                                    <tr>
+                                        <td><span class="answer"></span><input id="car-4-reg" class="reg" type="text" value="" placeholder="Enter Registration"></input>
+                                        </td>
+                                        <td id="car-4-name" class="name"></td>
+                                        <td><span id="car-4-cmra" class="answer"></span><input id="car-4-cmr" class="cmr" type="text" value="" placeholder="Enter Miles Left"></input>
+                                        </td>
+                                        <td><span id="car-4-mtnc" class="answer" type="number"></span><input id="car-4-mtnc" class="mtnc" type="text" value="" placeholder="Enter Miles needed"></input>
+                                        </td>
+                                        <td id="car-4-charge-needed" class="charge"></td>
+                                        <td id="car-4-tl" class="tl"><span class="answer" type="time"></span><input class="time" type="time" min="07:00:00" max="16:00:00" required></input>
+                                        </td>
+                            
+                                    </tr>
+                                    <tr>
+                                        <td><span class="answer"></span><input id="car-5-reg" class="reg" type="text" value="" placeholder="Enter Registration"></input>
+                                        </td>
+                                        <td id="car-5-name" class="name"></td>
+                                        <td><span id="car-5-cmra" class="answer"></span><input id="car-5-cmr" class="cmr" type="text" value="" placeholder="Enter Miles Left"></input>
+                                        </td>
+                                        <td><span id="car-5-mtnc" class="answer" type="number"></span><input id="car-5-mtnc" class="mtnc" type="text" value="" placeholder="Enter Miles needed"></input>
+                                        </td>
+                                        <td id="car-5-charge-needed" class="charge"></td>
+                                        <td id="car-5-tl" class="tl"><span class="answer" type="time"></span><input class="time" type="time" min="07:00:00" max="16:00:00" required></input>
+                                        </td>
+                            
+                                    </tr>
+                                    <tr>
+                                        <td><span class="answer"></span><input id="car-6-reg" class="reg" type="text" value="" placeholder="Enter Registration"></input>
+                                        </td>
+                                        <td id="car-6-name" class="name"></td>
+                                        <td><span id="car-6-cmra" class="answer"></span><input id="car-6-cmr" class="cmr" type="text" value="" placeholder="Enter Miles Left"></input>
+                                        </td>
+                                        <td><span id="car-6-mtnc" class="answer" type="number"></span><input id="car-6-mtnc" class="mtnc" type="text" value="" placeholder="Enter Miles needed"></input>
+                                        </td>
+                                        <td id="car-6-charge-needed" class="charge"></td>
+                                        <td id="car-6-tl" class="tl"><span class="answer" type="time"></span><input class="time" type="time" min="07:00:00" max="16:00:00" required></input>
+                                        </td>
+                            
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                                <span><p>Once the correct details have been entered hit CONFIRM to confirm the details,<br>
+                                    if you make a mistake, OR need to CHANGE the LEAVING TIME hit the RESET button.
+                                </p></span>
+                                <button class="confirm">Confirm</button>
                           
-                                  </tr>
-                                  <tr>
-                                    <td><span class="answer"></span><input id="car-2-reg" class="reg" type="text" value="" placeholder="Enter Registration"></input>
-                                    </td>
-                                    <td id="car-2-name" class="name"></td>
-                                    <td><span id="car-2-cmra" class="answer" type="number"></span><input id="car-2-cmr" class="cmr" type="text" value="" placeholder="Enter Miles Left"></input>
-                                    </td>
-                                    <td><span id="car-2-mtnc" class="answer" type="number"></span><input id="car-2-mtnc" class="mtnc" type="text" value="" placeholder="Enter Miles needed"></input>
-                                    </td>
-                                    <td id="car-2-charge-needed" class="charge"></td>
-                                    <td id="car-2-tl" class="tl"><span class="answer" type="time"></span><input class="time" type="time" min="07:00:00" max="16:00:00" required></input>
-                                    </td>
-                          
-                                  </tr>
-                                  <tr>
-                                    <td><span class="answer"></span><input id="car-3-reg" class="reg" type="text" value="" placeholder="Enter Registration"></input>
-                                    </td>
-                                    <td id="car-3-name" class="name"></td>
-                                    <td><span id="car-3-cmra" class="answer"></span><input id="car-3-cmr" class="cmr" type="text" value="" placeholder="Enter Miles Left"></input>
-                                    </td>
-                                    <td><span id="car-3-mtnc" class="answer" type="number"></span><input id="car-3-mtnc" class="mtnc" type="text" value="" placeholder="Enter Miles needed"></input>
-                                    </td>
-                                    <td id="car-3-charge-needed" class="charge"></td>
-                                    <td id="car-3-tl" class="tl"><span class="answer" type="time"></span><input class="time" type="time" min="07:00:00" max="16:00:00" required></input>
-                                    </td>
-                          
-                                  </tr>
-                                  <tr>
-                                    <td><span class="answer"></span><input id="car-4-reg" class="reg" type="text" value="" placeholder="Enter Registration"></input>
-                                    </td>
-                                    <td id="car-4-name" class="name"></td>
-                                    <td><span id="car-4-cmra" class="answer"></span><input id="car-4-cmr" class="cmr" type="text" value="" placeholder="Enter Miles Left"></input>
-                                    </td>
-                                    <td><span id="car-4-mtnc" class="answer" type="number"></span><input id="car-4-mtnc" class="mtnc" type="text" value="" placeholder="Enter Miles needed"></input>
-                                    </td>
-                                    <td id="car-4-charge-needed" class="charge"></td>
-                                    <td id="car-4-tl" class="tl"><span class="answer" type="time"></span><input class="time" type="time" min="07:00:00" max="16:00:00" required></input>
-                                    </td>
-                          
-                                  </tr>
-                                  <tr>
-                                    <td><span class="answer"></span><input id="car-5-reg" class="reg" type="text" value="" placeholder="Enter Registration"></input>
-                                    </td>
-                                    <td id="car-5-name" class="name"></td>
-                                    <td><span id="car-5-cmra" class="answer"></span><input id="car-5-cmr" class="cmr" type="text" value="" placeholder="Enter Miles Left"></input>
-                                    </td>
-                                    <td><span id="car-5-mtnc" class="answer" type="number"></span><input id="car-5-mtnc" class="mtnc" type="text" value="" placeholder="Enter Miles needed"></input>
-                                    </td>
-                                    <td id="car-5-charge-needed" class="charge"></td>
-                                    <td id="car-5-tl" class="tl"><span class="answer" type="time"></span><input class="time" type="time" min="07:00:00" max="16:00:00" required></input>
-                                    </td>
-                          
-                                  </tr>
-                                  <tr>
-                                    <td><span class="answer"></span><input id="car-6-reg" class="reg" type="text" value="" placeholder="Enter Registration"></input>
-                                    </td>
-                                    <td id="car-6-name" class="name"></td>
-                                    <td><span id="car-6-cmra" class="answer"></span><input id="car-6-cmr" class="cmr" type="text" value="" placeholder="Enter Miles Left"></input>
-                                    </td>
-                                    <td><span id="car-6-mtnc" class="answer" type="number"></span><input id="car-6-mtnc" class="mtnc" type="text" value="" placeholder="Enter Miles needed"></input>
-                                    </td>
-                                    <td id="car-6-charge-needed" class="charge"></td>
-                                    <td id="car-6-tl" class="tl"><span class="answer" type="time"></span><input class="time" type="time" min="07:00:00" max="16:00:00" required></input>
-                                    </td>
-                          
-                                  </tr>
-                                </tbody>
-                          
-                              </table>
-                              <button id="generate-time-table" class="generate">Generate Schedule</button>
+                             
                             </div>
-                          </div>
-                          <div id="schedule " class="schedule">
-                            <table id="table_id_2" class="table">
-                              <thead>
-                                <tr>
-                                  <th id="car">Car</th>
-                                  <th id="7" value="7">7 - 8</th>
-                                  <th id="8" value="8">8 - 9</th>
-                                  <th id="9" value="9">9 - 10</th>
-                                  <th id="10" value="10">10 - 11</th>
-                                  <th id="11" value="11">11- 12</th>
-                                  <th id="12" value="12">12 -13</th>
-                                  <th id="13" value="13">13 - 14</th>
-                                  <th id="14" value="14">14 - 15</th>
-                                  <th id="15" value="15">15 - 16</th>
-                                  <th id="16" value="16">16 - 17</th>
-                                  <th id="exit_miles" class="exit">Exit Miles</th>
-                                </tr>
-                              </thead>
                           
-                              <tbody>
-                            <!-- add attrr value to each td -->
-                                <tr id="tr-car-1">
-                                  <td id="car-2">Car 1</td>
-                                  <td id="7" value="7"></td>
-                                  <td id="8" value="8"></td>
-                                  <td id="9" value="9"></td>
-                                  <td id="10" value="10"></td>
-                                  <td id="11" value="11"></td>
-                                  <td id="12" value="12"></td>
-                                  <td id="13" value="13"></td>
-                                  <td id="14" value="14"></td>
-                                  <td id="15" value="15"></td>
-                                  <td id="16" value="16"></td>
-                                  <td id="car-1-exit-miles" class="exit"></td>
-                                </tr>
-                          
-                                <tr>
-                                  <td id="car-2">Car 2</td>
-                                  <td id="7" value="7"></td>
-                                  <td id="8" value="8"></td>
-                                  <td id="9" value="9"></td>
-                                  <td id="10" value="10"></td>
-                                  <td id="11" value="11"></td>
-                                  <td id="12" value="12"></td>
-                                  <td id="13" value="13"></td>
-                                  <td id="14" value="14"></td>
-                                  <td id="15" value="15"></td>
-                                  <td id="16" value="16"></td>
-                                  <td id="car-2-exit-miles" class="exit"></td>
-                                </tr>
-                          
-                                <tr>
-                                  <td id="car-3">Car 3</td>
-                                  <td id="7" value="7"></td>
-                                  <td id="8" value="8"></td>
-                                  <td id="9" value="9"></td>
-                                  <td id="10" value="10"></td>
-                                  <td id="11" value="11"></td>
-                                  <td id="12" value="12"></td>
-                                  <td id="13" value="13"></td>
-                                  <td id="14" value="14"></td>
-                                  <td id="15" value="15"></td>
-                                  <td id="16" value="16"></td>
-                                  <td id="car-3-exit-miles" class="exit"></td>
-                                </tr>
-                          
-                                <tr>
-                                  <td id="car-4">Car 4</td>
-                                  <td id="7" value="7"></td>
-                                  <td id="8" value="8"></td>
-                                  <td id="9" value="9"></td>
-                                  <td id="10" value="10"></td>
-                                  <td id="11" value="11"></td>
-                                  <td id="12" value="12"></td>
-                                  <td id="13" value="13"></td>
-                                  <td id="14" value="14"></td>
-                                  <td id="15" value="15"></td>
-                                  <td id="16" value="16"></td>
-                                  <td id="car-4-exit-miles" class="exit"></td>
-                                </tr>
-                          
-                                <tr>
-                                  <td id="car-5">Car 5</td>
-                                  <td id="7" value="7"></td>
-                                  <td id="8" value="8"></td>
-                                  <td id="9" value="9"></td>
-                                  <td id="10" value="10"></td>
-                                  <td id="11" value="11"></td>
-                                  <td id="12" value="12"></td>
-                                  <td id="13" value="13"></td>
-                                  <td id="14" value="14"></td>
-                                  <td id="15" value="15"></td>
-                                  <td id="16" value="16"></td>
-                                  <td id="car-5-exit-miles" class="exit"></td>
-                                </tr>
-                          
-                                <tr>
-                                  <td id="car-6">Car 6</td>
-                                  <td id="7" value="7"></td>
-                                  <td id="8" value="8"></td>
-                                  <td id="9" value="9"></td>
-                                  <td id="10" value="10"></td>
-                                  <td id="11" value="11"></td>
-                                  <td id="12" value="12"></td>
-                                  <td id="13" value="13"></td>
-                                  <td id="14" value="14"></td>
-                                  <td id="15" value="15"></td>
-                                  <td id="16" value="16"></td>
-                                  <td id="car-6-exit-miles" class="exit"></td>
-                                </tr>
-                              </tbody>
-                          
-                            </table>
-                            <!-- <button id="generate-time-table" class="generate">Generate Schedule</button> -->
-                        </div>
-                    </div>
-
-                    <!-- <div id="schedule "class="schedule">
-                        <table id="table_id_2" class="table">
-                            <thead>
-                                <tr>
+                            <div id="schedule " class="schedule">
+                                <span><p>Once you have CONFIRMED the details hit GENERATE to see the charge schedule</p></span>
+                                <button id="generate-time-table" class="generate">Generate Schedule</button>
+                                <table id="table_id_2" class="table">
+                                <thead>
+                                    <tr>
                                     <th id="car">Car</th>
                                     <th id="7" value="7">7 - 8</th>
                                     <th id="8" value="8">8 - 9</th>
@@ -402,111 +273,111 @@
                                     <th id="14" value="14">14 - 15</th>
                                     <th id="15" value="15">15 - 16</th>
                                     <th id="16" value="16">16 - 17</th>
-                                    <th id="exit_miles">Exit Miles</th>                            
-                                </tr>
-                            </thead>
+                                    <th id="exit_miles" class="exit">Exit Miles</th>
+                                    </tr>
+                                </thead>
                             
-                            <tbody>
-
-                                <tr id="tr-car-1">
-                                    <td id="scar-1">Car 1</td>
-                                    <td id="car-1-7" class="not_charging"></td>
-                                    <td id="car-1-8" class="not_charging"></td>
-                                    <td id="car-1-9" class="not_charging"></td>
-                                    <td id="car-1-10" class="not_charging"></td>
-                                    <td id="car-1-11" class="not_charging"></td>
-                                    <td id="car-1-12" class="not_charging"></td>
-                                    <td id="car-1-13" class="not_charging"></td>
-                                    <td id="car-1-14" class="not_charging"></td>
-                                    <td id="car-1-15" class="not_charging"></td>
-                                    <td id="car-1-16" class="not_charging"></td>
-                                    <td id="car-1-exit-miles"></td>
-                                </tr>  
-
-                                <tr>
-                                    <td id="scar-2">Car 2</td>
-                                    <td id="car-2-7" class="charging not_charging"></td>
-                                    <td id="car-2-8" class="charging not_charging"></td>
-                                    <td id="car-2-9" class="charging not_charging"></td>
-                                    <td id="car-2-10" class="charging not_charging"></td>
-                                    <td id="car-2-11" class="charging not_charging"></td>
-                                    <td id="car-2-12" class="charging not_charging"></td>
-                                    <td id="car-2-13" class="charging not_charging"></td>
-                                    <td id="car-2-14" class="charging not_charging"></td>
-                                    <td id="car-2-15" class="charging not_charging"></td>
-                                    <td id="car-2-16" class="charging not_charging"></td>
-                                    <td id="car-2-exit-miles"></td>
-                                </tr>     
-                                    
-                                <tr>
-                                    <td id="scar-3">Car 3</td>
-                                    <td id="car-3-7" class="charging not_charging"></td>
-                                    <td id="car-3-8" class="charging not_charging"></td>
-                                    <td id="car-3-9" class="charging not_charging"></td>
-                                    <td id="car-3-10" class="charging not_charging"></td>
-                                    <td id="car-3-13" class="charging not_charging"></td>
-                                    <td id="car-3-12" class="charging not_charging"></td>
-                                    <td id="car-3-13" class="charging not_charging"></td>
-                                    <td id="car-3-14" class="charging not_charging"></td>
-                                    <td id="car-3-15" class="charging not_charging"></td>
-                                    <td id="car-3-16" class="charging not_charging"></td>
-                                    <td id="car-3-exit-miles"></td>
-                                </tr>  
-
-                                <tr>
-                                    <td id="scar-4" >Car 4</td>
-                                    <td id="car-4-7" class="charging not_charging"></td>
-                                    <td id="car-4-8" class="charging not_charging"></td>
-                                    <td id="car-4-9" class="charging not_charging"></td>
-                                    <td id="car-4-10" class="charging not_charging"></td>
-                                    <td id="car-4-11" class="charging not_charging"></td>
-                                    <td id="car-4-12" class="charging not_charging"></td>
-                                    <td id="car-4-13" class="charging not_charging"></td>
-                                    <td id="car-4-14" class="charging not_charging"></td>
-                                    <td id="car-4-15" class="charging not_charging"></td>
-                                    <td id="car-4-16" class="charging not_charging"></td>
-                                    <td id="car-4-exit-miles"></td>
-                                </tr>  
-
-                                <tr>
-                                    <td id="scar-5">Car 5</td>
-                                    <td id="car-5-7" class="charging not_charging"></td>
-                                    <td id="car-5-8" class="charging not_charging"></td>
-                                    <td id="car-5-9" class="charging not_charging"></td>
-                                    <td id="car-5-10" class="charging not_charging"></td>
-                                    <td id="car-5-11" class="charging not_charging"></td>
-                                    <td id="car-5-12" class="charging not_charging"></td>
-                                    <td id="car-5-13" class="charging not_charging"></td>
-                                    <td id="car-5-14" class="charging not_charging"></td>
-                                    <td id="car-5-15" class="charging not_charging"></td>
-                                    <td id="car-5-16" class="charging not_charging"></td>
-                                    <td id="car-5-exit-miles"></td>
-                                </tr>  
-
-                                <tr>
-                                    <td id="scar-6">Car 6</td>
-                                    <td id="car-6-7" class="charging not_charging"></td>
-                                    <td id="car-6-8" class="charging not_charging"></td>
-                                    <td id="car-6-9" class="charging not_charging"></td>
-                                    <td id="car-6-10" class="charging not_charging"></td>
-                                    <td id="car-6-11" class="charging not_charging"></td>
-                                    <td id="car-6-12" class="charging not_charging"></td>
-                                    <td id="car-6-13" class="charging not_charging"></td>
-                                    <td id="car-6-14" class="charging not_charging"></td>
-                                    <td id="car-6-15" class="charging not_charging"></td>
-                                    <td id="car-6-16" class="charging not_charging"></td>
-                                    <td id="car-6-exit-miles"></td>
-                                </tr>  
-                            </tbody>
-
-                        </table>
-                    </div> -->
-
-                    <footer id="footer" class="footer">
-                        <br><br><br><br><br><br><br><br><br><br>
-
-                    </footer>
-                    </div>
+                                <tbody>
+                                <!-- add attrr value to each td -->
+                                    <tr id="tr-car-1">
+                                    <td id="car-2">Car 1</td>
+                                    <td id="7" value="7"></td>
+                                    <td id="8" value="8"></td>
+                                    <td id="9" value="9"></td>
+                                    <td id="10" value="10"></td>
+                                    <td id="11" value="11"></td>
+                                    <td id="12" value="12"></td>
+                                    <td id="13" value="13"></td>
+                                    <td id="14" value="14"></td>
+                                    <td id="15" value="15"></td>
+                                    <td id="16" value="16"></td>
+                                    <td id="car-1-exit-miles" class="exit"></td>
+                                    </tr>
+                            
+                                    <tr>
+                                    <td id="car-2">Car 2</td>
+                                    <td id="7" value="7"></td>
+                                    <td id="8" value="8"></td>
+                                    <td id="9" value="9"></td>
+                                    <td id="10" value="10"></td>
+                                    <td id="11" value="11"></td>
+                                    <td id="12" value="12"></td>
+                                    <td id="13" value="13"></td>
+                                    <td id="14" value="14"></td>
+                                    <td id="15" value="15"></td>
+                                    <td id="16" value="16"></td>
+                                    <td id="car-2-exit-miles" class="exit"></td>
+                                    </tr>
+                            
+                                    <tr>
+                                    <td id="car-3">Car 3</td>
+                                    <td id="7" value="7"></td>
+                                    <td id="8" value="8"></td>
+                                    <td id="9" value="9"></td>
+                                    <td id="10" value="10"></td>
+                                    <td id="11" value="11"></td>
+                                    <td id="12" value="12"></td>
+                                    <td id="13" value="13"></td>
+                                    <td id="14" value="14"></td>
+                                    <td id="15" value="15"></td>
+                                    <td id="16" value="16"></td>
+                                    <td id="car-3-exit-miles" class="exit"></td>
+                                    </tr>
+                            
+                                    <tr>
+                                    <td id="car-4">Car 4</td>
+                                    <td id="7" value="7"></td>
+                                    <td id="8" value="8"></td>
+                                    <td id="9" value="9"></td>
+                                    <td id="10" value="10"></td>
+                                    <td id="11" value="11"></td>
+                                    <td id="12" value="12"></td>
+                                    <td id="13" value="13"></td>
+                                    <td id="14" value="14"></td>
+                                    <td id="15" value="15"></td>
+                                    <td id="16" value="16"></td>
+                                    <td id="car-4-exit-miles" class="exit"></td>
+                                    </tr>
+                            
+                                    <tr>
+                                    <td id="car-5">Car 5</td>
+                                    <td id="7" value="7"></td>
+                                    <td id="8" value="8"></td>
+                                    <td id="9" value="9"></td>
+                                    <td id="10" value="10"></td>
+                                    <td id="11" value="11"></td>
+                                    <td id="12" value="12"></td>
+                                    <td id="13" value="13"></td>
+                                    <td id="14" value="14"></td>
+                                    <td id="15" value="15"></td>
+                                    <td id="16" value="16"></td>
+                                    <td id="car-5-exit-miles" class="exit"></td>
+                                    </tr>
+                            
+                                    <tr>
+                                    <td id="car-6">Car 6</td>
+                                    <td id="7" value="7"></td>
+                                    <td id="8" value="8"></td>
+                                    <td id="9" value="9"></td>
+                                    <td id="10" value="10"></td>
+                                    <td id="11" value="11"></td>
+                                    <td id="12" value="12"></td>
+                                    <td id="13" value="13"></td>
+                                    <td id="14" value="14"></td>
+                                    <td id="15" value="15"></td>
+                                    <td id="16" value="16"></td>
+                                    <td id="car-6-exit-miles" class="exit"></td>
+                                    </tr>
+                                </tbody>
+                            
+                                </table>
+                                <!-- <button id="generate-time-table" class="generate">Generate Schedule</button> -->
+                            </div>
+                            <br> <br> <br> <br>
+                           
+                            
+                    </div>    
+                </div>
             </div>
         </div>
 
