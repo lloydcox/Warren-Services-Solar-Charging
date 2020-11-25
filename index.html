@@ -18,140 +18,23 @@
         <div class="page-container">
             <div class="container">
                     <header class="header">
+                        <div class="logo-div">
+                        <img src="imgs/logo.jfif" class="logo" alt="logo">
+                    </div>
 
+                    <div class="charge-title">
+                        <h2>Live Charge Time Table</h2>
+                            <p>Select the Registration of the car when you have hooked it up to charge so the table can take 
+                                in the current charge, charge accordingly and tell you how long is left for 100% charge.</p>
+
+                            <p>If at anytime you want to EDIT any details, hit the RESET</p>
+
+                    </div>
                     </header>
 
                 <div class="content-container">
-
-                    <div id="home" class="home">
-                        <h1>Warren Services</h1>
-                    </div>
-
-
-                    <div id="cars" class="cars">
-                        <div class="cars-title">
-                            <h2>Cars</h2>
-                                <p>We currently have 6 cars at Warren Services, you can learn about each car below.</p>
-                        </div>
-
-                            <div id="car-1" class="car">
-                                <h4>Little White</h4>
-                                    <img src="imgs/car-1.jfif" alt="little White">
-                                        <table>
-                                            <tr>
-                                            <th>Reg number</th>
-                                            <th>Maximum Miles Range</th> 
-                                            <th>Return to charge @Milese</th>
-                                            </tr>
-
-                                            <tr>
-                                                <td>NP60UQQ</td>
-                                                <td>250Miles</td>
-                                                <td>25</td>
-                                            </tr>
-                                        </table>
-                            </div>
-
-                            <div id="car-2" class="car">
-                                <h4>Little Blue</h4>
-                                    <img src="imgs/car-2.jfif" alt="little Blue#">
-                                        <table>
-                                            <tr>
-                                            <th>Reg number</th>
-                                            <th>Maximum Miles Range</th> 
-                                            <th>Return to charge @Miles</th>
-                                            </tr>
-
-                                            <tr>
-                                                <td>NP60UQS</td>
-                                                <td>250Miles</td>
-                                                <td>25</td>
-                                            </tr>
-                                        </table>
-                            </div>
-
-                            <div id="car-3" class="car">
-                                <h4>The Tango</h4>
-                                    <img src="imgs/car-3.jfif" alt="the Tango">
-                                        <table>
-                                            <tr>
-                                            <th>Reg number</th>
-                                            <th>Maximum Miles Range</th> 
-                                            <th>Return to charge @Miles</th>
-                                            </tr>
-
-                                            <tr>
-                                                <td>NP60UQT</td>
-                                                <td>250Miles</td>
-                                                <td>25</td>
-                                            </tr>
-                                        </table>
-                            </div>
-
-                            <div id="car-4" class="car">
-                                <h4>The Gandalf</h4>
-                                    <img src="imgs/car-4.jfif" alt="the Gandalf">
-                                        <table>
-                                            <tr>
-                                            <th>Reg number</th>
-                                            <th>Maximum Miles Range</th> 
-                                            <th>Return to charge @Miles</th>
-                                            </tr>
-
-                                            <tr>
-                                                <td>NP60UQU</td>
-                                                <td>250Miles</td>
-                                                <td>25</td>
-                                            </tr>
-                                        </table>
-                            </div>
-
-                            <div id="car-5" class="car">
-                                <h4>Aqua</h4>
-                                    <img src="imgs/car-5.jfif" alt="Aqua">
-                                        <table>
-                                            <tr>
-                                            <th>Reg number</th>
-                                            <th>Maximum Miles Range</th> 
-                                            <th>Return to charge @Miles</th>
-                                            </tr>
-
-                                            <tr>
-                                                <td>NP60UQV</td>
-                                                <td>250Miles</td>
-                                                <td>25</td>
-                                            </tr>
-                                        </table>
-                            </div>
-
-                            <div id="car-6" class="car">
-                                <h4>Big Red</h4>
-                                    <img src="imgs/car-6.jfif" alt="Big Red">
-                                        <table>
-                                            <tr>
-                                            <th>Reg number</th>
-                                            <th>Maximum Miles Range</th> 
-                                            <th>Return to charge @Miles</th>
-                                            </tr>
-
-                                            <tr>
-                                                <td>NP60UQW</td>
-                                                <td>250Miles</td>
-                                                <td>25</td>
-                                            </tr>
-                                        </table>
-                            </div>
-                    </div>
-
                     <div id="table-section" class="table-section">
-                        <div class="charge-title">
-                            <h2>Live Charge Time Table</h2>
-                                <p>Add the Registration of the car when you have hooked it up to charge so the table can take 
-                                    in the current charge, charge accordingly and tell you how long is left for 100% charge.</p>
-
-                                <p>If at anytime you want to EDIT any details, hit the RESET</p>
-                                <button class="reset" type="reset">Reset</button>
-                        </div>
+ 
 
                             <div>
 
@@ -168,7 +51,15 @@
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td><span class="answer"></span><input class="reg question" id="car-1-reg" type="text" value="" placeholder="Enter Registration"></input>
+                                        <td><span class="answer"></span>
+                                            <select class="reg dropdown" type="text" value="" placeholder="Enter Registration">
+                                                <option>NP60UQQ</option>
+                                                <option>NP60UQS</option>
+                                                <option>NP60UQT</option>
+                                                <option>NP60UQU</option>
+                                                <option>NP60UQV</option>
+                                                <option>NP60UQW</option>
+                                            </select>
                                         </td>
                                         <td id="car-1-name" class="name value-reset"></td>
                                         <td><span id="car-1-cmra" class="answer" type="number"></span><input id="car-1-cmr" class="cmr question" type="text" value="" placeholder="Enter Miles Left"></input>
@@ -181,7 +72,15 @@
                             
                                     </tr>
                                     <tr>
-                                        <td><span class="answer"></span><input id="car-2-reg" class="reg" type="text" value="" placeholder="Enter Registration"></input>
+                                        <td><span class="answer"></span>                                            
+                                            <select class="reg dropdown" type="text" value="" placeholder="Enter Registration">
+                                                <option>NP60UQQ</option>
+                                                <option>NP60UQS</option>
+                                                <option>NP60UQT</option>
+                                                <option>NP60UQU</option>
+                                                <option>NP60UQV</option>
+                                                <option>NP60UQW</option>
+                                            </select>
                                         </td>
                                         <td id="car-2-name" class="name"></td>
                                         <td><span id="car-2-cmra" class="answer" type="number"></span><input id="car-2-cmr" class="cmr" type="text" value="" placeholder="Enter Miles Left"></input>
@@ -194,7 +93,15 @@
                             
                                     </tr>
                                     <tr>
-                                        <td><span class="answer"></span><input id="car-3-reg" class="reg" type="text" value="" placeholder="Enter Registration"></input>
+                                        <td><span class="answer"></span>
+                                            <select class="reg dropdown" type="text" value="" placeholder="Enter Registration">
+                                                <option>NP60UQQ</option>
+                                                <option>NP60UQS</option>
+                                                <option>NP60UQT</option>
+                                                <option>NP60UQU</option>
+                                                <option>NP60UQV</option>
+                                                <option>NP60UQW</option>
+                                            </select>
                                         </td>
                                         <td id="car-3-name" class="name"></td>
                                         <td><span id="car-3-cmra" class="answer"></span><input id="car-3-cmr" class="cmr" type="text" value="" placeholder="Enter Miles Left"></input>
@@ -207,7 +114,15 @@
                             
                                     </tr>
                                     <tr>
-                                        <td><span class="answer"></span><input id="car-4-reg" class="reg" type="text" value="" placeholder="Enter Registration"></input>
+                                        <td><span class="answer"></span>
+                                            <select class="reg dropdown" type="text" value="" placeholder="Enter Registration">
+                                                <option>NP60UQQ</option>
+                                                <option>NP60UQS</option>
+                                                <option>NP60UQT</option>
+                                                <option>NP60UQU</option>
+                                                <option>NP60UQV</option>
+                                                <option>NP60UQW</option>
+                                            </select>
                                         </td>
                                         <td id="car-4-name" class="name"></td>
                                         <td><span id="car-4-cmra" class="answer"></span><input id="car-4-cmr" class="cmr" type="text" value="" placeholder="Enter Miles Left"></input>
@@ -220,7 +135,15 @@
                             
                                     </tr>
                                     <tr>
-                                        <td><span class="answer"></span><input id="car-5-reg" class="reg" type="text" value="" placeholder="Enter Registration"></input>
+                                        <td><span class="answer"></span>
+                                            <select class="reg dropdown" type="text" value="" placeholder="Enter Registration">
+                                                <option>NP60UQQ</option>
+                                                <option>NP60UQS</option>
+                                                <option>NP60UQT</option>
+                                                <option>NP60UQU</option>
+                                                <option>NP60UQV</option>
+                                                <option>NP60UQW</option>
+                                            </select>
                                         </td>
                                         <td id="car-5-name" class="name"></td>
                                         <td><span id="car-5-cmra" class="answer"></span><input id="car-5-cmr" class="cmr" type="text" value="" placeholder="Enter Miles Left"></input>
@@ -233,7 +156,15 @@
                             
                                     </tr>
                                     <tr>
-                                        <td><span class="answer"></span><input id="car-6-reg" class="reg" type="text" value="" placeholder="Enter Registration"></input>
+                                        <td><span class="answer"></span>
+                                            <select class="reg dropdown" type="text" value="" placeholder="Enter Registration">
+                                                <option>NP60UQQ</option>
+                                                <option>NP60UQS</option>
+                                                <option>NP60UQT</option>
+                                                <option>NP60UQU</option>
+                                                <option>NP60UQV</option>
+                                                <option>NP60UQW</option>
+                                            </select>
                                         </td>
                                         <td id="car-6-name" class="name"></td>
                                         <td><span id="car-6-cmra" class="answer"></span><input id="car-6-cmr" class="cmr" type="text" value="" placeholder="Enter Miles Left"></input>
@@ -248,17 +179,25 @@
                                     </tbody>
 
                                 </table>
-                                <span><p>Once the correct details have been entered hit CONFIRM to confirm the details,<br>
-                                    if you make a mistake, OR need to CHANGE the LEAVING TIME hit the RESET button.
-                                </p></span>
-                                <button class="confirm">Confirm</button>
+                                
+                                <div class="schedule-text">
+                                    <!-- <span>
+                                        <p>Once the correct details have been entered hit CONFIRM to confirm the details,<br>
+                                        if you make a mistake, OR need to CHANGE the LEAVING TIME hit the RESET button.
+                                        </p>
+                                    </span> -->
+                                    <button class="reset" type="reset">Reset</button>
+                                    <button class="confirm">Confirm</button>
+                                </div>
                           
                              
                             </div>
                           
                             <div id="schedule " class="schedule">
-                                <span><p>Once you have CONFIRMED the details hit GENERATE to see the charge schedule</p></span>
-                                <button id="generate-time-table" class="generate">Generate Schedule</button>
+                                <div class="schedule-text">
+                                    <span><p>Once you have CONFIRMED the details hit GENERATE to see the charge schedule</p></span>
+                                    <button id="generate-time-table" class="generate">Generate Schedule</button>
+                                </div>
                                 <table id="table_id_2" class="table">
                                 <thead>
                                     <tr>
@@ -373,10 +312,125 @@
                                 </table>
                                 <!-- <button id="generate-time-table" class="generate">Generate Schedule</button> -->
                             </div>
-                            <br> <br> <br> <br>
+                     
                            
                             
                     </div>    
+
+                    <div id="cars" class="cars">
+                        <div class="cars-title">
+                            <h2>Cars</h2>
+                                <p>We currently have 6 cars at Warren Services, you can learn about each car below.</p>
+                        </div>
+
+                            <div id="car-1" class="car">
+                                <h4>Little White</h4>
+                                    <img src="imgs/car-1.jfif" alt="little White">
+                                        <table>
+                                            <tr>
+                                            <th>Reg number</th>
+                                            <th>Maximum Miles Range</th> 
+                                            <th>return charge @Milese</th>
+                                            </tr>
+
+                                            <tr>
+                                                <td>NP60UQQ</td>
+                                                <td>250Miles</td>
+                                                <td>25</td>
+                                            </tr>
+                                        </table>
+                            </div>
+
+                            <div id="car-2" class="car">
+                                <h4>Little Blue</h4>
+                                    <img src="imgs/car-2.jfif" alt="little Blue#">
+                                        <table>
+                                            <tr>
+                                            <th>Reg number</th>
+                                            <th>Maximum Miles Range</th> 
+                                            <th>return charge @Miles</th>
+                                            </tr>
+
+                                            <tr>
+                                                <td>NP60UQS</td>
+                                                <td>250Miles</td>
+                                                <td>25</td>
+                                            </tr>
+                                        </table>
+                            </div>
+
+                            <div id="car-3" class="car">
+                                <h4>The Tango</h4>
+                                    <img src="imgs/car-3.jfif" alt="the Tango">
+                                        <table>
+                                            <tr>
+                                            <th>Reg number</th>
+                                            <th>Maximum Miles Range</th> 
+                                            <th>return charge @Miles</th>
+                                            </tr>
+
+                                            <tr>
+                                                <td>NP60UQT</td>
+                                                <td>250Miles</td>
+                                                <td>25</td>
+                                            </tr>
+                                        </table>
+                            </div>
+
+                            <div id="car-4" class="car">
+                                <h4>The Gandalf</h4>
+                                    <img src="imgs/car-4.jfif" alt="the Gandalf">
+                                        <table>
+                                            <tr>
+                                            <th>Reg number</th>
+                                            <th>Maximum Miles Range</th> 
+                                            <th>return charge @Miles</th>
+                                            </tr>
+
+                                            <tr>
+                                                <td>NP60UQU</td>
+                                                <td>250Miles</td>
+                                                <td>25</td>
+                                            </tr>
+                                        </table>
+                            </div>
+
+                            <div id="car-5" class="car">
+                                <h4>Aqua</h4>
+                                    <img src="imgs/car-5.jfif" alt="Aqua">
+                                        <table>
+                                            <tr>
+                                            <th>Reg number</th>
+                                            <th>Maximum Miles Range</th> 
+                                            <th>return charge @Miles</th>
+                                            </tr>
+
+                                            <tr>
+                                                <td>NP60UQV</td>
+                                                <td>250Miles</td>
+                                                <td>25</td>
+                                            </tr>
+                                        </table>
+                            </div>
+
+                            <div id="car-6" class="car">
+                                <h4>Big Red</h4>
+                                    <img src="imgs/car-6.jfif" alt="Big Red">
+                                        <table>
+                                            <tr>
+                                            <th>Reg number</th>
+                                            <th>Maximum Miles Range</th> 
+                                            <th>return charge @Miles</th>
+                                            </tr>
+
+                                            <tr>
+                                                <td>NP60UQW</td>
+                                                <td>250Miles</td>
+                                                <td>25</td>
+                                            </tr>
+                                        </table>
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>

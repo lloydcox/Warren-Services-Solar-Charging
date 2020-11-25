@@ -5,10 +5,10 @@
 }
 
 body {
-font-family: Poppins,sans-serif;
-font-size: 1rem;
-letter-spacing: .4px;
-margin: 0;
+    font-family: Poppins,sans-serif;
+    font-size: 1rem;
+    letter-spacing: .4px;
+    margin: 0;
 }
 
 .page-container {
@@ -18,14 +18,14 @@ margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url("../imgs/bg.png");
+    background-image: url("../imgs/pagebg.jpg");
     background-repeat: no-repeat;
     background-size: contain;
-    background-color: #000032;
+    background-color: #000235;
 }
 
 .container {
-    width: 1200px;
+    width: 1000px;
     align-self: center;
     z-index: 1;
     background-color: white;
@@ -35,15 +35,16 @@ margin: 0;
 }
 
 .content-container {
-    width: 90%;
+    width: 95%;
     text-align: center;
     align-self: center;
 }
 
-.header ul {
+.header {
     display: flex;
-    justify-content: space-around;
-    align-content: center;
+    justify-content: space-between;
+    align-self: center;
+    width: 95%;    
 }
 
 button {
@@ -51,8 +52,10 @@ button {
     border: none;
     font: inherit;
     color: white;
-    background-color: #000032;
+    background-color: #36bff2;
     margin: 5px;  
+    border-radius: 5px;
+    border: 3px solid #00417b;
 }
 
 ul {
@@ -64,36 +67,88 @@ a {
     text-decoration: none;
 } 
 
-.cars-title {
-    width: 80%;
+
+.cars-title, .schedule-text {
+    width: 100%;
+    // border: 3px solid #00417b;
+    color: #00417b;
+    border-radius: 5px;
+
+}
+
+.charge-title {
+    width: 50%;
+    border: 3px solid #00417b;
+    color: white;
+    background-color: #36bff2;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .cars {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    border: 3px solid #00417b;
+    color: white;
+    border-radius: 5px;
+}
+
+h4 {
+    // background-color: #36bff2;
+    color: white;
+    margin: 0px;
+    padding: 5px;
 }
 
 .car {
     width: 30%;
     text-align: center;
-    border: 3px solid #000032;
+    border: 3px solid #00417b;
     margin: 5px;
+    background-color: #36bff2;
+    border-radius: 5px;
     img {
         width: 100%;
         height: 200px;
+        border-radius: 5px;
     }
 }
 
 .table {
-    border: 3px solid #000032;
+    border: 3px solid #36bff2;
     width: 100%;
+    background-color: #00417b;
+    color: white;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+#table_id_2 {
+    width: 100%;
+    background-color: #36bff2;
+    border: 3px solid #00417b;
+    color: white;
+    margin: 10px 0;
+}
+
+tbody {
+    color: white;
+}
+
+table.dataTable tbody tr {
+    background-color: #00417b;
 }
 
 .charging {
-    background-color: yellow;
+    background-color: #36bff2;
 }
 
-.blocked {
-    background-color: red;
+// .blocked {
+//     background-color: red;
+// }
+
+.generate {
+    background-color: #00417b;
+    border: 3px solid #36bff2;
 }

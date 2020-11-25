@@ -4,7 +4,7 @@ var regss = [{
 },
 {
   "name": "NP60UQS",
-  "values": "Little Grey"
+  "values": "Little Blue"
 },
 {
   "name": "NP60UQT",
@@ -34,8 +34,9 @@ searching: false,
 select: true
 });
 
-$("input[type='text']").change(function() {
-var regs = $(this).val().toUpperCase();  
+
+$("select").change(function() {
+var regs = $(this).val().toUpperCase();
 
 if ($(this).hasClass("reg")) {
   var cars_name = $(regss)
@@ -50,9 +51,8 @@ if ($(this).hasClass("reg")) {
 
   } else {
     $(this).closest("tr").find(".name").text("Not a valid Registration")
-
   }
-}
+}    
 });
 
 $("input[type='time']").change(function() {
@@ -72,6 +72,8 @@ $("input[type='time']").change(function() {
 $(".reset").click(function() {
 $(".answer").html("");
 $("input").show();
+$("select").show();
+
 });
 
 $(".confirm").click(function() {
@@ -88,7 +90,7 @@ $(".confirm").click(function() {
   } else if (cmra == null || cmra == "") {
     $(this).find(".charge").text("Please enter the current miles left");
   } else if (mtnc == null || mtnc == "") {
-    $(this).find(".charge").text("Please enter the mtnc  left");
+    $(this).find(".charge").text("Please enter the mile to next charge");
   }
 }) 
 });
@@ -117,18 +119,29 @@ $("#table_id tbody tr").each(function() {
     for (var i = hrs; i > leaves; i--) {
     //add bg to that td
       $(this).find("td[value=" + i + "]").css({
-        "background-color": "yellow"
+        "background-color": "#00417b"
       });;
     }
     // add exit miles 
     $(this).find(".exit").text(mtnc)
   });
   count++;//increment to go to next tr 
-
 })
+});
 
+// Drop Down 
+
+$('select').val(2);
+
+$(function() {
+  $('.dropdown').change(function() {
+    dropdownval = $(this).val();
+    $('.dropdown').not(this).find('option[value="' + dropdownval + '"]').remove();
+  });
 });
-  $(".reset").click(function() {
-  $(".answer").html("");
-  $("input").show();
-});
+
+
+
+
+
+  
