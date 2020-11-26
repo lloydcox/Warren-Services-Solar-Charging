@@ -118,7 +118,7 @@ $("#table_id tbody tr").each(function() {
 //if hrs = 11 and leaves = 2 so loop from 11 -10-9-8..
     for (var i = hrs; i > leaves; i--) {
     //add bg to that td
-      $(this).find("td[value=" + i + "]").css({
+      $(this).find("td[value=" + (i - i + 7) + "]").css({
         "background-color": "#00417b"
       });;
     }
