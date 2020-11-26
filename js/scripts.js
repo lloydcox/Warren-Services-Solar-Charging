@@ -73,6 +73,7 @@ $(".reset").click(function() {
 $(".answer").html("");
 $("input").show();
 $("select").show();
+$("#table_id_2").addClass("hide");
 
 });
 
@@ -127,6 +128,8 @@ $("#table_id tbody tr").each(function() {
   });
   count++;//increment to go to next tr 
 })
+
+$("#table_id_2").removeClass("hide");
 });
 
 // Drop Down 

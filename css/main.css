@@ -165,4 +165,9 @@ table.dataTable tbody tr {
   border: 3px solid #36bff2;
 }
 
+/* line 156, ../../../Desktop/Portfolio/Warren-Services-Solar-Charging/scss/partials/_basestyles.scss */
+.hide {
+  display: none;
+}
+
 /*# sourceMappingURL=main.css.map */
